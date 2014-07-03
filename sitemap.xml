@@ -50,7 +50,7 @@
     </url>
     <url>
         <loc>http://dev.theladders.com/2013/08/were-hosting-erlang-factory-lite/</loc>
-        <lastmod>2014-03-27T12:44:39-04:00</lastmod>
+        <lastmod>2014-06-17T13:38:57-04:00</lastmod>
     </url>
     <url>
         <loc>
@@ -68,11 +68,11 @@
     </url>
     <url>
         <loc>http://dev.theladders.com/blog/archives/</loc>
-        <lastmod>2014-03-27T12:44:39-04:00</lastmod>
+        <lastmod>2014-06-17T13:38:57-04:00</lastmod>
     </url>
     <url>
         <loc>http://dev.theladders.com/</loc>
-        <lastmod>2014-03-27T12:44:39-04:00</lastmod>
+        <lastmod>2014-06-17T13:38:57-04:00</lastmod>
     </url>
     <url>
         <loc>http://dev.theladders.com/ourteam/ambrishmisra/</loc>
@@ -124,11 +124,15 @@
     </url>
     <url>
         <loc>http://dev.theladders.com/ourteam/</loc>
-        <lastmod>2014-06-16T08:12:20-04:00</lastmod>
+        <lastmod>2014-07-03T12:32:00-04:00</lastmod>
     </url>
     <url>
         <loc>http://dev.theladders.com/ourteam/isaacsteele/</loc>
         <lastmod>2014-06-16T08:07:39-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dev.theladders.com/ourteam/jaygaonkar/</loc>
+        <lastmod>2014-07-03T12:29:12-04:00</lastmod>
     </url>
     <url>
         <loc>http://dev.theladders.com/ourteam/jeremyblock/</loc>
@@ -169,6 +173,10 @@
     <url>
         <loc>http://dev.theladders.com/ourteam/kyrisarantakos/</loc>
         <lastmod>2014-06-16T08:07:39-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dev.theladders.com/ourteam/leonliao/</loc>
+        <lastmod>2014-07-03T12:21:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://dev.theladders.com/ourteam/mattchesler/</loc>

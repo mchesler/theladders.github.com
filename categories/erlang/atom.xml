@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Erlang | TheLadders Engineering Stories]]></title>
   <link href="http://dev.theladders.com/categories/erlang/atom.xml" rel="self"/>
   <link href="http://dev.theladders.com/"/>
-  <updated>2014-06-16T08:12:33-04:00</updated>
+  <updated>2014-07-03T12:32:01-04:00</updated>
   <id>http://dev.theladders.com/</id>
   <author>
     <name><![CDATA[TheLadders Engineering]]></name>
@@ -18,7 +18,7 @@
     <link href="http://dev.theladders.com/2013/08/were-hosting-erlang-factory-lite/"/>
     <updated>2013-08-07T16:06:00-04:00</updated>
     <id>http://dev.theladders.com/2013/08/were-hosting-erlang-factory-lite</id>
-    <content type="html"><![CDATA[<p>Thanks to one of our Lead Software Engineers, <a href="http://dev.theladders.com/ourteam/derekbrown/">Derek Brown</a>, TheLadders will be hosting the first <a href="http://www.erlang-factory.com/conference/NYC2013">NYC Erlang Factory Lite</a> on the 14th of September.</p>
+    <content type="html"><![CDATA[<p>Thanks to one of our Lead Software Engineers, Derek Brown, TheLadders will be hosting the first <a href="http://www.erlang-factory.com/conference/NYC2013">NYC Erlang Factory Lite</a> on the 14th of September.</p>
 
 <p>If you haven’t heard about Erlang before, it is an open-source programming language that was designed for massive concurrency, making it an ideal candidate for scalability on multicore architectures. The language was invented for telecoms, but due to its unique features it quickly made its way into a range of other verticals with similar requirements – from financial switches, through instant messaging servers, HTTP servers and web frameworks, database engines and so forth. It is used for highly available systems, providing uptime of five nines and allowing live code updates, all at a fraction of the effort required by conventional languages such as C++ and Java. Ericsson, Aol, WhatsApp, Nokia, T-Mobile, Heroku and Basho are a few of the companies that employ Erlang.</p>
 
