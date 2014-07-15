@@ -4,7 +4,7 @@
   <title><![CDATA[Category: RabbitMQ | TheLadders Engineering Stories]]></title>
   <link href="http://dev.theladders.com/categories/rabbitmq/atom.xml" rel="self"/>
   <link href="http://dev.theladders.com/"/>
-  <updated>2014-07-15T10:23:59-04:00</updated>
+  <updated>2014-07-15T10:29:13-04:00</updated>
   <id>http://dev.theladders.com/</id>
   <author>
     <name><![CDATA[TheLadders Engineering]]></name>
@@ -118,6 +118,8 @@ This event, created by the Clojure library, includes a <em>:host</em> member whi
 <h2><em>Wrapping Up</em></h2>
 
 <p>With <em>monitor-rabbitmq</em>, we supply a regular flow of events to our <em>Riemann</em> server containing data about our RabbitMQ queues and nodes. By choosing a good base set of statistics to request from the RabbitMQ Management API, a change to our monitoring and alerting requirements usually results in only a change to our <em>Riemann</em> configuration.</p>
+
+<p>Find this useful? Join the discussion at <a href="https://news.ycombinator.com/item?id=8036593">Hacker News</a>.</p>
 ]]></content>
   </entry>
   
