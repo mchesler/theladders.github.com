@@ -155,15 +155,15 @@ var _sf_async_config={uid:14481,domain:"dev.theladders.com"};
 <p>Our first attempts at a monitoring solution revolved around an assortment of shell scripts that made HTTP requests to the RabbitMQ Management API to discover the lengths of important queues at particular times. If certain thresholds were crossed, alerts were sent to on-call personnel. This approach had a number of drawbacks:</p>
 
 <ul>
-<li>Brittleness: The times of the Management API queries were controlled by when the script was run by <em>cron</em>. The queue length thresholds were often dependent on the sizes of the datasets involved and the speed of the systems which published messages or read them from the queues.</li>
+<li>Brittleness: The times of the Management API queries were controlled by when the script was run by cron. The queue length thresholds were often dependent on the sizes of the datasets involved and the speed of the systems which published messages or read them from the queues.</li>
 <li>Measuring Queue Lengths at a Single Point in Time: Checking the queue length at a particular point in time could not provide the information necessary to answer questions such as &ldquo;When will this queue be drained?&rdquo; and &ldquo;Are messages being placed on the queue at a rate sufficient to meet a particular processing schedule?&rdquo;</li>
 </ul>
 
 
 <h2><em>How We Solved the Problem</em></h2>
 
-<p>We created a <a href="http://clojure.org/">Clojure</a> library called <a href="https://github.com/TheLadders/monitor-rabbitmq">monitor-rabbitmq</a>, available on <strong>GitHub</strong>.
-It gathers statistics on RabbitMQ queues and nodes, and packages them as <a href="http://riemann.io">Riemann</a> events. <em>monitor-rabbitmq</em> takes care of acquiring RabbitMQ statistics from the RabbitMQ cluster, using the RabbitMQ’s HTTP based <a href="http://hg.rabbitmq.com/rabbitmq-management/raw-file/rabbitmq_v3_3_4/priv/www/api/index.html">Management API</a>. <em>Riemann</em> takes care of aggregating the events and performing the calculations necessary to determine whether an alert should be triggered.</p>
+<p>We created a <a href="http://clojure.org/">Clojure</a> library called <a href="https://github.com/TheLadders/monitor-rabbitmq">monitor-rabbitmq</a>, available on GitHub.
+It gathers statistics on RabbitMQ queues and nodes, and packages them as <a href="http://riemann.io">Riemann</a> events. <em>monitor-rabbitmq</em> takes care of acquiring RabbitMQ statistics from the RabbitMQ cluster, using the RabbitMQ’s HTTP based <a href="http://hg.rabbitmq.com/rabbitmq-management/raw-file/rabbitmq_v3_3_4/priv/www/api/index.html">Management API</a>. Riemann takes care of aggregating the events and performing the calculations necessary to determine whether an alert should be triggered.</p>
 
 <hr />
 
@@ -206,7 +206,7 @@ It gathers statistics on RabbitMQ queues and nodes, and packages them as <a href
 </ul>
 
 
-<p><strong>What does each</strong> <em>Riemann</em> <strong>event look like?</strong>
+<p><strong>What does each</strong> Riemann <strong>event look like?</strong>
 Here is the Clojure representation (a map):</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -224,19 +224,19 @@ Here is the Clojure representation (a map):</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>This event, created by the Clojure library, includes a <em>:host</em> member which is formed by taking a <em>rmq-display-name</em> argument (“our-rabbitmq”) and composing it with the queue (or node) name: “super.awesome.queue”</p>
+<p>This event, created by the Clojure library, includes a <code>:host</code> member which is formed by taking a <code>rmq-display-name argument</code> (“our-rabbitmq”) and composing it with the queue (or node) name: “super.awesome.queue”</p>
 
 <h2><em>An Example</em></h2>
 
 <p>Let&rsquo;s say that we have a queue which is read by a Storm topology. That queue contains messages which hold matches between jobs and job seekers. The topology must process the messages so that emails notifying job seekers of these job opportunities are composed and sent to an external email service. We want to be alerted if the messages are being consumed from the queue at a rate such that the queue will not be cleared by a certain deadline, say 9:00 AM.</p>
 
-<p>We create a simple Clojure application that calls the <em>send-nodes-stats-to-riemann</em> function of our library and then exits. We call this application once a minute. Each call results in a full set of queue statistics being sent to our Riemann server.</p>
+<p>We create a simple Clojure application that calls the <code>send-nodes-stats-to-riemann</code> function of our library and then exits. We call this application once a minute. Each call results in a full set of queue statistics being sent to our Riemann server.</p>
 
 <p>Meanwhile, on the Riemann side of things, Riemann has been configured to watch the Ack rate of our queue. Riemann accumulates events over a time interval, smoothing out minor variations in the Ack rate, and calculates a projected time for the queue to be emptied. If the Ack rate dips below a certain threshold, it triggers an alert using, in our environment, the <a href="https://www.icinga.org">Icinga</a> monitoring system.</p>
 
 <h2><em>Wrapping Up</em></h2>
 
-<p>With <em>monitor-rabbitmq</em>, we supply a regular flow of events to our <em>Riemann</em> server containing data about our RabbitMQ queues and nodes. By choosing a good base set of statistics to request from the RabbitMQ Management API, a change to our monitoring and alerting requirements usually results in only a change to our <em>Riemann</em> configuration.</p>
+<p>With <em>monitor-rabbitmq</em>, we supply a regular flow of events to our Riemann server containing data about our RabbitMQ queues and nodes. By choosing a good base set of statistics to request from the RabbitMQ Management API, a change to our monitoring and alerting requirements usually results in only a change to our Riemann configuration.</p>
 
 <p>Find this useful? Join the discussion at <a href="https://news.ycombinator.com/item?id=8036593">Hacker News</a>.</p>
 </div>
