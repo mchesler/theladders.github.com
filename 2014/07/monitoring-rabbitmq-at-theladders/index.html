@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>TheLadders Engineering Stories</title>
+  <title>Monitoring RabbitMQ at TheLadders - TheLadders Engineering Stories</title>
   <meta name="author" content="TheLadders Engineering">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dev.theladders.com/">
+  <link rel="canonical" href="http://dev.theladders.com/2014/07/monitoring-rabbitmq-at-theladders/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -103,15 +103,12 @@ var _sf_async_config={uid:14481,domain:"dev.theladders.com"};
 </header>
 	<main id="main" class="main">
 		<div class="content">
-		  <div class="blog-index">
+		  <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article class="article">
-      
   <header>
     
-      <h1 class="entry-title"><a href="/2014/07/monitoring-rabbitmq-at-theladders/">Monitoring RabbitMQ at TheLadders</a></h1>
+      <h1 class="entry-title">Monitoring RabbitMQ at TheLadders</h1>
     
     
       <p class="meta">
@@ -134,7 +131,7 @@ var _sf_async_config={uid:14481,domain:"dev.theladders.com"};
   </header>
 
 
-  <div class="entry-content"><blockquote><p>Alice:        “How long is forever?”</p><p>White Rabbit:     “Sometimes, just one second.&#8221;</p><footer><strong>&#8211;Lewis Carroll</strong> <cite>Alice in Wonderland</cite></footer></blockquote>
+<div class="entry-content"><blockquote><p>Alice:        “How long is forever?”</p><p>White Rabbit:     “Sometimes, just one second.&#8221;</p><footer><strong>&#8211;Lewis Carroll</strong> <cite>Alice in Wonderland</cite></footer></blockquote>
 
 
 <h2><em>Motivation</em></h2>
@@ -241,21 +238,68 @@ Here is the Clojure representation (a map):</p>
 
 <p>With <em>monitor-rabbitmq</em>, we supply a regular flow of events to our <em>Riemann</em> server containing data about our RabbitMQ queues and nodes. By choosing a good base set of statistics to request from the RabbitMQ Management API, a change to our monitoring and alerting requirements usually results in only a change to our <em>Riemann</em> configuration.</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+       
+     <span class="byline author vcard">Posted by <span class="fn">
+		<a href="/ourteam/jonruttenberg">Jon Ruttenberg</a></span></span>
   
   
 
 
-    </article>
+      
+
+
+
+
+
+
+
+
   
-  <div class="pagination">
+
+
+<time datetime="2014-07-15T10:24:00-04:00" pubdate data-updated="true">Jul 15<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/rabbitmq/'>RabbitMQ</a>
+  
+</span>
+
+
+    </p>
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a class="archives" href="/blog/archives">Blog Archives</a>
-    
-  </div> 
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://dev.theladders.com/2014/07/monitoring-rabbitmq-at-theladders/" data-via="TheLaddersDev" data-counturl="http://dev.theladders.com/2014/07/monitoring-rabbitmq-at-theladders/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/12/a-brewing-storm/" title="Previous Post: A Brewing Storm">&laquo; A Brewing Storm</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
 
 		</div>
 	</main>
